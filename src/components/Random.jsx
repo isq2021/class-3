@@ -1,4 +1,6 @@
 import React,{Component} from 'react';
+import '../components/Random.css'
+
 
 export default class Random extends Component {
     constructor(){
@@ -11,7 +13,7 @@ export default class Random extends Component {
       }
 
   render() {
-      const activePage = this.state.actualpage
+      const activePage = this.state.actualPage
 
       let pageInformation;
 
@@ -20,27 +22,35 @@ export default class Random extends Component {
         pageInformation = "React · Declarative. React makes it painless to create interactive UIs. · Component-Based. Build encapsulated components that manage their own state, then compose"
         break
         case 1:
-        pageInformation = "What It's Used For: VueJS is primarily used to build web interfaces and one-page applications. In saying that, it can also be applied to both desktop and mobile app development thanks to the HTML extensions and JS base working in tandem with an Electron framework –"
+        pageInformation = "What It's Used For: VueJS is primarily used to build web interfaces and one-page applications. In saying that, it can also be applied to both desktop and mobile app development thanks to the HTML extensions and JS base working in tandem with an Electron framework "
         break
         default:
         pageInformation = "What is Angular?link · A component-based framework for building scalable web applications · A collection of well-integrated libraries that cover a wide variety of ."
       }
 
-    return 
+    return (
     <>
         <div>
-            <div>
+            <div className='container1'>
                 <button onClick={() => this.changePage(0)} >Option 0</button>
-                <button>Option 1</button>
-                <button>Option 2</button>
+                <button onClick={() => this.changePage(1)}>Option 1</button>
+                <button onClick={() => this.changePage(2)}>Option 2</button>
+            
+          
+                
             </div>
-            {pageInformation}
+            <div className='container1'>
+                {pageInformation}
 
-            <button>123</button>
+            </div>
+            
+
+            
         
         </div>;
     
     </>
+    )
     
   }
 }
